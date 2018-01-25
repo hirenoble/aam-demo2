@@ -9,7 +9,6 @@
 <!--The following script tag downloads a font from the Adobe Edge Web Fonts server for use within the web page. We recommend that you do not modify it.-->
 <script>var __adobewebfontsappname__="dreamweaver"</script>
 <script src="https://use.edgefonts.net/source-sans-pro:n2:default.js" type="text/javascript"></script>
-
 <script>
 var demdex_seg="", chromeBrowser=false,jacketsCampaign=false;
 function aam_cb() {
@@ -33,6 +32,7 @@ function aam_cb() {
 </head>
 <body>
 <!-- Main Container -->
+  
 <div class="container"> 
   <!-- Navigation -->
   <header> <a href="">
@@ -48,8 +48,8 @@ function aam_cb() {
   </header>
   <!-- Hero Section --> 
   <!-- <div class="ad" id="ad"><h1 style="position: inherit;text-align: center;vertical-align: bottom">Best Coats and Jackets for You!</h1></div> -->
-  <div class="hero" id="hero"></div>
-	    <h2 class="hero_header" id="tag">No ads to show</h2>
+	  <div style="text-align: center"><a id="ad_dest" href="#"><img id="aam_ad" src=""></a>  </div>
+    <h2 class="hero_header" id="tag">No ads to show</h2>
 
   <!-- About Section -->
   <section class="about" id="about">
@@ -116,10 +116,10 @@ function aam_cb() {
 		   }
 	  if(jacketsCampaign)
 		   {
-			   document.getElementById("hero").style.backgroundRepeat="no-repeat";
-			   document.getElementById("hero").style.backgroundImage="url('images/ad.jpg')";
-			   document.getElementById("hero").style.backgroundPosition="center";
-			   document.getElementById("tag").innerHTML="Best Coats & Jackets for you!";
+			   document.getElementById("tag").innerHTML="";
+			   document.getElementById("aam_ad").src="images/ad.jpg";	
+			   document.getElementById("ad_dest").href="http://localhost:4502/content/we-retail/us/en/products/men.html";
+
 		   }
 	</script>
 </body>
