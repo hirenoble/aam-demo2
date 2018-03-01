@@ -10,7 +10,7 @@
 <script>var __adobewebfontsappname__="dreamweaver"</script>
 <script src="https://use.edgefonts.net/source-sans-pro:n2:default.js" type="text/javascript"></script>
 <script>
-var demdex_seg="", chromeBrowser=false,jacketsCampaign=false;
+var demdex_seg="", chromeBrowser=false,jacketsCampaign=false, cancelFlag=false;
 function aam_cb() {
    if (typeof (arguments[0].stuff) != "undefined" && arguments[0].stuff != "") {
        demdex_seg = arguments[0].stuff;
@@ -24,6 +24,10 @@ function aam_cb() {
 				   {
 					   jacketsCampaign=true;
 				   }
+			   else if(demdex_seg[i].cn=="cancel_cookie")
+			   {
+				   cancelFlag=true;
+			   }
 		   }
    }
 }
@@ -121,6 +125,13 @@ function aam_cb() {
 			   document.getElementById("ad_dest").href="http://localhost:4502/content/we-retail/us/en/products/men.html";
 
 		   }
+	if(cancelFlag)
+	{
+		document.getElementById("tag").innerHTML="";
+		document.getElementById("aam_ad").src="images/cancel.jpg";	
+		document.getElementById("ad_dest").href="http://localhost:4502/content/we-retail/us/en/products/men.html";
+
+	}
 	</script>
 </body>
 </html>
